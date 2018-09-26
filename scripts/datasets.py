@@ -65,7 +65,7 @@ class CaptionDataset(Dataset):
         title_len = torch.LongTensor([self.title_lens[i]])
 
         # TODO: return the title and title length
-        if self.split is 'TtransformRAIN':
+        if self.split is 'TRAIN':
             return img, caption, caplen, title, title_len
         else:
             # For validation of testing, also return all 'captions_per_image' captions to find BLEU-4 score
